@@ -28,7 +28,8 @@ export const get5First = () => {
 };
 
 export const getRedGoods = () => {
-  return getAll().then(goods => goods.filter(good => good.color === 'red'))
+  return getAll()
+    .then(goods => goods.filter(good => good.color === 'red'))
     .catch(() => {
       throw new Error('Failed to load red goods');
     });
